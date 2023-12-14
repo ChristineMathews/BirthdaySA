@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import './App.css';
 
 function App() {
-  const birthdayDate = new Date('December 23, 2023 00:00:00 GMT');
-
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
@@ -12,6 +10,8 @@ function App() {
   });
 
   const [showCountdown, setShowCountdown] = useState(true);
+
+  const birthdayDate = useMemo(() => new Date('December 23, 2023 00:00:00 GMT'), []); // Use useMemo
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,8 +33,10 @@ function App() {
       setCountdown({ days, hours, minutes, seconds });
     }, 1000);
 
-    return () => clearInterval(interval);
-  }, [birthdayDate]);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [birthdayDate]); // Include birthdayDate in the dependency array
 
   return (
     <div className="App">
@@ -55,4 +57,3 @@ function App() {
 }
 
 export default App;
-
