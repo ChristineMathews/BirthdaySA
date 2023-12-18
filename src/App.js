@@ -12,7 +12,7 @@ function App() {
     seconds: 0,
   });
 
-  const [showCurtain, setShowCurtain] = useState(true);
+  
   const [showFireworks, setShowFireworks] = useState(false);
   const [showGreetings, setShowGreetings] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -25,7 +25,6 @@ function App() {
       const timeLeft = birthdayDate - currentDate;
 
       if (timeLeft <= 0) {
-        setShowCurtain(false);
         setShowFireworks(true);
 
         setTimeout(() => {
