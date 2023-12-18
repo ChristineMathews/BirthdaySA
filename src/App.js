@@ -17,7 +17,7 @@ function App() {
   const [showGreetings, setShowGreetings] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const birthdayDate = useMemo(() => new Date('December 23, 2023 23:00:00 IST'), []);
+  const birthdayDate = useMemo(() => new Date('December 22, 2023 23:00:00 IST'), []);
 
   useEffect(() => {
     const interval = setInterval(() => {
