@@ -14,10 +14,10 @@ function App() {
 
   
   const [showFireworks, setShowFireworks] = useState(false);
-  const [showGreetings, setShowGreetings] = useState(false);
+  const [showGreetings, setShowGreetings] = useState(true);
   const [loading, setLoading] = useState(true);
 
-  const birthdayDate = useMemo(() => new Date('December 18, 2023 22:41:00 GMT'), []);
+  const birthdayDate = useMemo(() => new Date('December 23, 2023 23:00:00 IST'), []);
 
   useEffect(() => {
     const interval = setInterval(() => {
