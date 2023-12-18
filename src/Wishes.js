@@ -64,7 +64,7 @@ class Wishes extends Component {
       <div className="container">
         <section className="intro" ref={this.intro}>
           <p>
-            A long time ago, in a galaxy far,<br /> far away....
+            A long time ago (25 LOL!), in a galaxy far,<br /> far away....
           </p>
         </section>
         <section className="logo" ref={this.logo}>
@@ -72,24 +72,21 @@ class Wishes extends Component {
         </section>
         <section className="crawl">
           <div className="content" ref={this.content}>
-            <h1 className="title">Episode 7</h1>
-            <h2 className="subtitle">THE APP AWAKENS</h2>
-            <p>
-              The Development Team Lead has vanished. In her absence, the
-              sinister FUNCTIONAL BUG has risen from the ashes of the CI Tool
-              and will not rest until the last developer has been destroyed.
-            </p>
-            <p>
-              With the support of the QA TEAM, the Software Developer leads a
-              brave RESISTANCE. He is desperate to find his Lead and gain her
-              help in restoring peace and justice to the repository.
-            </p>
-            <p>
-              The Developer has sent his most daring editor theme on a secret
-              mission to the production branch, where an old ally has discovered
-              a clue to the Lead’s whereabouts....
-            </p>
-          </div>
+          <h1 className="title">Episode 25</h1>
+      <h2 className="subtitle">THE BIRTHDAY CELEBRATION</h2>
+      <p>
+        Snehal, a beacon of sweetness and positivity, steps into the enchanting age of 25. On this special day,
+        we gather to celebrate her journey, filled with joy, kindness, and amazing accomplishments.
+      </p>
+      <p>
+        Fueled with passion and ambition, Snehal inspires everyone around her. As she embraces this new chapter,
+        may it be adorned with endless moments of happiness, success, and fulfillment.
+      </p>
+      <p>
+        Surrounded by friends and well-wishers, Snehal, the amazing person that she is, deserves all the love and
+        warmth the universe has to offer. Happy 25th Birthday! May this year be as extraordinary as you are!
+      </p>
+    </div>
         </section>
         <audio ref={this.audio} muted>
           <source
