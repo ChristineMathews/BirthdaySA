@@ -64,7 +64,7 @@ class Wishes extends Component {
       <div className="container">
         <section className="intro" ref={this.intro}>
           <p>
-            A long time ago (25 LOL!), in a galaxy far,<br /> far away....
+            A long time ago (25 years LOL!), in a galaxy far,<br /> far away....
           </p>
         </section>
         <section className="logo" ref={this.logo}>

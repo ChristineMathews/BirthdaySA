@@ -51,7 +51,7 @@ body {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   text-align: center; /* Add this line to center the text horizontally */
   display: flex;
@@ -62,17 +62,17 @@ body {
 }
 #countdown {
   text-align: center;
-  margin-top: 20px;
+ margin-bottom: 190px;
 }
 
 .countdown-text {
-  font-size: 1.2rem;
+  font-size: 0.7rem;
 }
 
 .countdown-timer {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  /* font-weight: bold; */
+  /* margin-top: 0.5rem; */
 }
 
 #greeting {
