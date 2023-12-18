@@ -1,6 +1,7 @@
 // App.js
 import React, { useEffect, useState, useMemo } from 'react';
 import FlashScreen from './FlashScreen';
+import Wishes from './Wishes'; // Import the Wishes component
 import './App.css';
 
 function App() {
@@ -44,61 +45,40 @@ function App() {
       setCountdown({ days, hours, minutes, seconds });
     }, 1000);
 
-        // Simulate loading completion
-        setTimeout(() => {
-          setLoading(false);
-        }, 2000); // Adjust the duration as needed
-    
+    // Simulate loading completion
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000); // Adjust the duration as needed
 
     return () => {
       clearInterval(interval);
     };
   }, [birthdayDate]);
 
-    return (
-    <div className="app-container">
-      {/* Conditionally render the FlashScreen or App component based on the loading state */}
+  return (
+    <div>
       {loading ? (
         <FlashScreen />
       ) : (
-        <div className={`app-content ${showCurtain ? 'curtain-open' : ''}`}>
-          {showCurtain && (
-            <div className="curtain"></div>
-          )}
-
-          {!showGreetings && !showFireworks && (
-            <div className="curtain-content">
-              <h1 className="title">Snehals Birthday Celebration!</h1>
-              <div id="countdown">
-                <p className="countdown-text">
-                  Countdown to the birthday: {`${countdown.days}d ${countdown.hours}h ${countdown.minutes}m ${countdown.seconds}s`}
-                </p>
+        <div>
+        
+            {!showGreetings && !showFireworks && (
+              <div className="app-container">
+              <div className="curtain-content">
+                <h1 className="title">Snehals Birthday Celebration!</h1>
+                <div id="countdown">
+                  <p className="countdown-text">
+                    Countdown to the birthday: {`${countdown.days}d ${countdown.hours}h ${countdown.minutes}m ${countdown.seconds}s`}
+                  </p>
+                </div>
               </div>
-            </div>
-          )}
-
-          {showFireworks && (
-            <div id="fireworks-container">
-              <div className="firework"></div>
-              <div className="firework"></div>
-              {/* Add more fireworks elements as needed */}
-            </div>
-          )}
-
-          {showGreetings && (
-            <div id="greeting">
-              <p className="greeting-text">Happy Birthday to the biggest fan of her own birthday!</p>
-              <p className="custom-content">
-                {/* Add your custom content or additional greetings here */}
-                Cheers to another year of joy, laughter, and wonderful memories!
-              </p>
-            </div>
-          )}
-        </div>
+              </div>
+            )}
+            {showGreetings && <Wishes />} {/* Render Wishes component when showGreetings is true */}
+          </div>
       )}
     </div>
   );
 }
 
 export default App;
-

@@ -5,12 +5,12 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
-    background-color: white; /* Set the background color as needed */
+    background-color: black; /* Set the background color as needed */
     opacity: 0;
-    animation: fadeIn 2s forwards; /* Use a fadeIn animation for 2 seconds */
+    animation: fadeIn 6s forwards; /* Use a fadeIn animation for 2 seconds */
   
     /* Additional styling */
-    color: #333;
+    color: white;
     font-size: 24px;
   }
   
